@@ -1,0 +1,296 @@
+<!--
+    TITLE:          technOverview.html
+    VERSION         1-005
+    AUTHOR(S):      Edit Hlaszny, PhD | [HED]
+    SUPERVISED BY:  -
+    CREATION DATE:  13-FEB-2026
+
+    ENVIRONMENT:    Google Chrome Version 144.0.7559.133 (Official Build) (x86_64)
+                    Safari Version 15.6.1 (17613.3.9.1.16)
+                    on iMAC macOS Monterey (12.5.1)
+
+    DESIGN ISSUES:
+        1) http://www.w3.org/TR/2004/WD-xhtml2-20040722/
+        2) http://www.w3.org/TR/REC-CSS1 Cascading Style Sheets, level 1
+
+    PORTABILITY ISSUES:     none
+    SUBSYSTEM:              none
+    MODIFICATION HISTORY:
+        date        modified by
+        13-FEB-2026 [HED]   1-001 first draw
+        23-FEB-2026 [HED]   1-002 added figures
+        20-MAR-2026 [HED]   1-003 providing OBO Foundry conformity
+        01-APR-2026 [HED]   1-004 added description about SSSOM facility
+        03-APR-2026 [HED]   1-005 terminological cosmetics
+
+    <meta http-equiv="refresh" content="2">
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script Language="JavaScript" type="text/javascript" src="./js/aux.js"></script>
+    <title>VVO Techn. Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/vvo_browser_style.css" />
+</head>
+<body style="background-color: var(--bg-tree);">
+
+<!--  ---------------------------  header  -->
+
+<header>
+    <div class="logo">
+      <div class="logo-icon">🍇</div>
+      &nbsp; VVO &mdash; Ontology for Cultivated Grapevine
+    </div>
+</header>
+
+<div class="main">
+    <div class="ontology-container">
+
+<!--  ---------------------------  Begin technical Overview  -->
+
+<h2>Technical Overview</h2>
+
+<h5>The VVO (Vitis Vinifera Ontology) is a controlled vocabulary that formally describes the morphological structures, phenological growth and developmental stages, quality parameters, dispositions, roles, and information entities of <i>Vitis vinifera</i> L., the common grapevine. It comprises 3,333 annotated classes organized in a strict taxonomic hierarchy.
+<p />
+The goal of the VVO is to establish a semantic framework for meaningful cross-species queries across biological properties of <i>Vitis vinifera</i>, enabling interoperability with other plant-related ontologies and biological databases. </h5>
+
+<!--  ---------------------------  Foundational Architecture  -->
+
+<h3>Foundational Architecture</h3>
+
+<h5>VVO is aligned with the Basic Formal Ontology (BFO 2020), the upper-level ontology adopted by the OBO Foundry as its standard framework for categorizing entities in the biomedical and biological sciences. Every class in VVO is traceable through its parent hierarchy to a BFO 2020 category, ensuring formal consistency and cross-ontology compatibility.
+<p>
+The root class, Vitis_vinifera, is aligned with <a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000040" target="_blank">BFO_0000040</a> (material entity). In accordance with BFO alignment requirements, the six top-level categories root directly under their respective BFO parents rather than under Vitis_vinifera — reflecting the ontological commitment that the entire vocabulary describes aspects of this single species.
+
+VVO maps classes to
+    <ol class="noBullets">
+        <li class="simple_list"><b>BTO</b>
+            (BRENDA Tissue and Enzyme Source Ontology),
+        </li>
+        <li class="simple_list"><b>GO</b>
+            (Gene Ontology),
+        </li>
+        <li class="simple_list"><b>NCBITAXON</b>
+            (NCBI taxonomy database),
+        </li>
+        <li class="simple_list"><b>PATO</b>
+            (Phenotype And Trait Ontology),
+        </li>
+        <li class="simple_list"><b>PO</b>
+            (Plant Ontology)
+        </li>
+    </ol>
+where applicable, and each class carries a SKOS
+cross-reference to support semantic integration with the broader plant science community.
+Annotation properties follow the Information Artifact Ontology (IAO) conventions, including 
+curation status metadata for every class.</h5>
+
+<!--  ---------------------------  Class Organization  -->
+
+<h3>Class Organization</h3>
+
+<h5>The 3,333 classes of VVO are organized into six top-level categories, each aligned with a distinct BFO 2020 category:</h5>
+<table border="0px">
+    <tr><td width="20px">&nbsp;</td><td>
+        <img src="./doc/p_vvo_class_struct.png"
+             loading="lazy"
+             alt="./doc/p_vvo_class_struct.png: class struct in protege"
+             width="400px">
+    </td></tr>
+</table>
+
+<!--  ---------------------------  Grapevine Morphological Structure  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Morphological Structure</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000040"
+   target="_blank">BFO_0000040</a> &ndash; material entity) encompasses 773 classes describing the spatially extended anatomical parts of the grapevine. This category covers all vegetative and reproductive organ systems from the root system through the permanent woody framework to the annual shoot system, including leaves, tendrils, inflorescences, and berries. Classes are organized by organ system and further refined by tissue and cellular level.</h5>
+<script Language="JavaScript">
+    show2figures("morphology",
+                 "p_morphological_struct.png",
+                 "850px",
+                 "b_morphological_struct.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Grapevine Phenological Process  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Phenological Process</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000015"
+   target="_blank">BFO_0000015</a> &ndash; process) comprises 464 classes modeling the temporally ordered developmental stages of the grapevine. This category is systematically aligned with the BBCH extended scale for grapevine (Lorenz et al. 1995), the internationally accepted framework for describing crop phenological stages. Subclasses capture individual phenophases and their sub-stages, from winter dormancy through bud burst, shoot growth, flowering, fruit set, berry development, veraison, ripening, leaf senescence, and return to dormancy.</h5>
+<script Language="JavaScript">
+    show2figures("phenology",
+                 "p_phenological_process.png",
+                 "850px",
+                 "b_phenological_process.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Grapevine Quality  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Quality</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000019"
+   target="_blank">BFO_0000019</a> &ndash; quality) contains 792 classes representing the measurable and observable attributes of grapevine structures and processes. These include morphological qualities such as size, shape, and color, as well as physiological parameters relevant to viticulture and enology.</h5>
+<script Language="JavaScript">
+    show2figures("quality",
+                 "p_quality.png",
+                 "850px",
+                 "b_quality.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Grapevine Disposition  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Disposition</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000016"
+    target="_blank">BFO_0000016</a> &ndash; disposition) comprises 404 classes describing the inherent tendencies and capacities of grapevine entities to behave in particular ways under specific conditions. This category covers biotic and abiotic stress resistance dispositions, including pathogen resistance, drought tolerance, and cold hardiness profiles.</h5>
+<script Language="JavaScript">
+    show2figures("disposition",
+                 "p_disposition.png",
+                 "850px",
+                 "b_disposition.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Grapevine Role  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Role</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000023"
+    target="_blank">BFO_0000023</a> &ndash; role) contains 352 classes capturing the functions that grapevine entities fulfill within viticultural contexts. This includes rootstock and scion roles, their vigor-modifying and disease-resistance properties, and their contributions to grafted vine systems.</h5>
+<script Language="JavaScript">
+    show2figures("role",
+                 "p_role.png",
+                 "850px",
+                 "b_role.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Grapevine Information Entity  -->
+<p />
+<h5><span style="font-weight: 600;">Grapevine Information Entity</span>
+(<a href="https://www.ebi.ac.uk/ols4/ontologies/bfo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000031"
+    target="_blank">BFO_0000031</a> &ndash; generically dependent continuant) encompasses 555 classes describing the information artifacts associated with <i>Vitis vinifera</i>, including cultivar designations, ampelographic descriptors, BBCH stage codes, and related classification systems.</h5>
+<script Language="JavaScript">
+    show2figures("Information Entity",
+                 "p_information_entity.png",
+                 "850px",
+                 "b_information_entity.png",
+                 "850px") ;
+</script>
+
+<!--  ---------------------------  Annotation Structure  -->
+
+<h3>Annotation Structure</h3>
+
+<h5>Every class in VVO carries a uniform set of nine annotation properties:
+    <ol class="noBullets">
+        <li class="simple_list">classification path,</li>
+        <li class="simple_list">class name,</li>
+        <li class="simple_list">a genus-differentia definition grounded in the viticultural and plant biological literature,</li>
+        <li class="simple_list">alternative terms in both English and German (bilingual EN/DE),</li>
+        <li class="simple_list">a concrete example of usage referencing specific cultivars, regions, and measurable parameters,</li>
+        <li class="simple_list">an editor note providing disambiguation guidance and additional scientific context,</li>
+        <li class="simple_list">external ontology mappings to BTO, GO, NCBITAXON, PATO, PO (SKOS),</li>
+        <li class="simple_list">curation status metadata (IAO),</li>
+        <li class="simple_list">and traceable definition sources citing the primary scientific literature.</li>
+    </ol>
+<p />
+The bilingual annotation reflects the central role of both English and German in the
+international viticultural research community. The total raw annotation volume amounts 
+to 17.3 megabytes of structured text.
+
+<h4>Reproductive Active Bud: Annotation example </h4>
+<p />
+<table border="0px">
+    <tr><td width="22px">&nbsp;</td><td>
+        <img src="./doc/b_annotationExample_1.png"
+             loading="lazy"
+             alt="./doc/b_annotationExample_1.png: annotation illustration"
+             width="780px">
+    </td></tr>
+</table>
+
+<h4>Rpv1 Resistance Disposition: position in the class structure </h4>
+<p />
+<table border="0px">
+    <tr><td width="20px">&nbsp;</td><td>
+        <img src="./doc/p_Rpv1_positionInClassStruct.png"
+             loading="lazy"
+             alt="./doc/p_Rpv1_positionInClassStruct.png: position in the class struct"
+             width="640px">
+    </td></tr>
+</table>
+
+<h4>Rpv1 Resistance Disposition: OBO Foundry-compliant numeric IRIs </h4>
+<p />
+<table border="0px">
+    <tr><td width="20px">&nbsp;</td><td>
+        <img src="./doc/p_Rpv1_OBOFoundryCompliantIRI.png"
+             loading="lazy"
+             alt="./doc/p_Rpv1_OBOFoundryCompliantIRI.png: OBO compliant IRIs"
+             width="640px">
+    </td></tr>
+</table>
+
+<!--  ---------------------------  Technical Infrastructure  -->
+<p />
+<p />
+
+<h3>Technical Infrastructure</h3>
+
+<h5>VVO annotations are maintained in a structured YAML format and three Java classes transform the annotated class data into a single OWL/XML-encoded ontology file to 287,818 lines of code. The
+<a href="./vvo_browser.html" target="_blank">VVO Browser</a>, a static single-page application built with HTML, CSS, and JavaScript, provides interactive access to the full class hierarchy and annotation content without requiring a web server or backend infrastructure.
+<p />
+It features a collapsible tree navigation panel, a detail panel displaying all annotation properties, and a client-side full-text search engine supporting partial matching across class names, alternative terms, and definitions in both languages.</h5>
+
+<p />
+<h5><span style="font-weight: 600;">The VVO Browser features an incremental search function with partial matching.</span> As the user types a query into the search field, matching classes are displayed in real time, filtered against both class labels and definitions. This allows researchers to locate specific morphological structures, phenological stages, or quality parameters without needing to know the exact class name — typing "Apical," for instance, immediately surfaces all related shoot and bud classes in the hierarchy.</h5>
+<table border="0px">
+    <tr><td width="20px">&nbsp;</td><td>
+        <img src="./doc/searchFunction.png"
+             loading="lazy"
+             alt="./doc/searchFunction.png: partial search function"
+             width="920px">
+    </td></tr>
+</table>
+
+<!--  ---------------------------  Scientific Context  -->
+
+<h3>Scientific Context</h3>
+
+<h5><i>Vitis vinifera</i> L. is the most widely cultivated fruit crop globally, with over 10,000 recognized cultivars grown across all temperate and Mediterranean climate zones. Despite its economic and cultural significance, no formal ontology had previously been developed specifically for this species. VVO addresses this gap by providing a comprehensive, BFO-aligned knowledge representation that bridges ampelography, plant phenology, viticultural science, and enology. VVO thus represents virgin territory in formal viticulture knowledge representation, offering a foundation for computational reasoning about grapevine biology that did not previously exist.</h5>
+
+<!--  ---------------------------  Development and Perspective  -->
+
+<h3>Development and Perspective</h3>
+
+<h5>VVO was developed through a sustained collaboration between deep domain knowledge in grapevine biology, viticulture, and plant phenology, and well-founded ontology engineering expertise. The annotation process drew on canonical references in the field, including Keller (2020), Mullins, Bouquet & Williams (1992), Pratt (1971), Lorenz et al. (1995), and the OIV Descriptor Lists, among many others. Each class definition was crafted to satisfy genus-differentia form, ensuring that every class is defined in terms of its parent class and a distinguishing characteristic.
+<p />
+The resulting ontology is intended to support applications in precision viticulture, 
+climate adaptation research, cultivar characterization, and phenological modeling. 
+As a BFO-aligned resource, VVO is designed to interoperate with established ontologies 
+such as the Plant Ontology (PO), the Gene Ontology (GO), and the Environment Ontology (ENVO), 
+thereby enabling integrative queries across species and domains.</h5>
+        <div class="fleuron">🍇</div>
+    </div>    <!-- end of ontology-container division -->
+</div>  <!-- end of main division -->
+
+<!--   FOOTER   -->
+<div class="own_footer">
+     <script Language="JavaScript">
+          writeFooterDown() ;
+     </script>
+    <span id="loadStatus"></span>
+</div>
+
+<script Language="JavaScript" type="text/javascript" src="./js/vvo_browser_js.js"></script>
+
+</body>
+</html>
+
+<!--
+    and of technOverview.html
+  -->

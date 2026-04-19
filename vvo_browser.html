@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VVO Browser — Vitis Vinifera Ontology</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./browserData/style/vvo_browser_style.css" />
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">🍇</div>
+    VVO Browser
+    <span class="logo-sub">Vitis Vinifera Ontology</span>
+  </div>
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search classes, terms, definitions…" autocomplete="off">
+    <div class="search-results-dropdown" id="searchDropdown"></div>
+  </div>
+  <!-- <div class="stats" id="statsDisplay">3.333 classes</div> -->
+</header>
+
+<!-- ── MAIN ── -->
+<div class="main">
+  <!-- Tree panel -->
+  <div class="tree-panel" id="treePanel">
+    <div class="tree-panel-header">
+      Class Hierarchy
+      <span id="treeCount"></span>
+    </div>
+    <div class="tree-scroll" id="treeScroll"></div>
+  </div>
+
+  <!-- Resize handle -->
+  <div class="resize-handle" id="resizeHandle"></div>
+
+  <!-- Detail panel -->
+  <div class="detail-panel" id="detailPanel">
+    <div class="detail-empty">
+      <div class="detail-empty-icon">🍇</div>
+      <div class="detail-empty-text">Select a class from the tree to view its annotations</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+     <script Language="JavaScript" type="text/javascript" src="./browserData/js/aux.js"></script>
+     <script Language="JavaScript">
+          writeFooterUp() ;
+     </script>
+    <span id="loadStatus"></span>
+</footer>
+
+<!-- ── DATA FILES ── -->
+<!-- 1) Accumulator init (must be first) -->
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_data_init.js"></script>
+
+<!-- 2) Tree structure -->
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_tree.js"></script>
+
+<!-- 3) Category data files (order does not matter) -->
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_root.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_morphology.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_phenology.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_quality.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_disposition.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_role.js"></script>
+<script Language="JavaScript" type="text/javascript" src="./browserData/data/vvo_information.js"></script>
+
+<!-- ── APPLICATION (must be last) ── -->
+<script Language="JavaScript" type="text/javascript" src="./browserData/js/vvo_browser_js.js"></script>
+</body>
+</html>

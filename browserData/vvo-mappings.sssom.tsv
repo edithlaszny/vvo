@@ -1,0 +1,41 @@
+# mapping_set_id: https://github.com/edithlaszny/vvo/vvo-mappings-v2-005
+# mapping_set_version: 2-005
+# license: https://creativecommons.org/licenses/by/4.0/
+# creator_id: orcid:0009-0005-6549-9839
+# curie_map:
+#   BTO: "http://purl.obolibrary.org/obo/BTO_"
+#   FOODON: "http://purl.obolibrary.org/obo/FOODON_"
+#   NCBITAXON: "http://purl.bioontology.org/ontology/NCBITAXON/"
+#   PO: "http://purl.obolibrary.org/obo/PO_"
+#   PPO: "http://purl.obolibrary.org/obo/PPO_"
+#   UBERON: "http://purl.obolibrary.org/obo/UBERON_"
+#   VVO: "http://purl.obolibrary.org/obo/VVO_"
+#   semapv: "https://w3id.org/semapv/vocab/"
+#   skos: "http://www.w3.org/2004/02/skos/core#"
+subject_id	predicate_id	object_id	match_type	confidence
+VVO:0000124	skos:closeMatch	BTO:0000274	semapv:HumanCurated	0.95
+VVO:0000138	skos:narrowMatch	PO:0009047	semapv:HumanCurated	0.95
+VVO:0000249	skos:closeMatch	FOODON:00003521	semapv:HumanCurated	0.95
+VVO:0000359	skos:closeMatch	BTO:0000158	semapv:HumanCurated	0.90
+VVO:0000359	skos:exactMatch	PO:0000055	semapv:HumanCurated	0.95
+VVO:0000359	skos:relatedMatch	UBERON:0001048	semapv:HumanCurated	0.90
+VVO:0000401	skos:narrowMatch	PO:0009047	semapv:HumanCurated	0.95
+VVO:0000513	skos:narrowMatch	PO:0025361	semapv:HumanCurated	0.90
+VVO:0000809	skos:narrowMatch	PO:0000056	semapv:HumanCurated	0.90
+VVO:0000809	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0001013	skos:closeMatch	PO:0009046	semapv:HumanCurated	0.95
+VVO:0001162	skos:closeMatch	PO:0009011	semapv:HumanCurated	0.95
+VVO:0001164	skos:narrowMatch	FOODON:03510197	semapv:HumanCurated	0.95
+VVO:0001354	skos:closeMatch	PO:0009049	semapv:HumanCurated	0.95
+VVO:0001484	skos:narrowMatch	PO:0000055	semapv:HumanCurated	0.90
+VVO:0001484	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0001508	skos:closeMatch	PO:0025034	semapv:HumanCurated	0.95
+VVO:0001689	skos:closeMatch	PPO:0001019	semapv:HumanCurated	0.95
+VVO:0001828	skos:narrowMatch	PO:0025073	semapv:HumanCurated	0.95
+VVO:0002254	skos:narrowMatch	PO:0025084	semapv:HumanCurated	0.95
+VVO:0002415	skos:narrowMatch	PO:0000055	semapv:HumanCurated	0.90
+VVO:0002415	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0002529	skos:narrowMatch	UBERON:0002100	semapv:HumanCurated	0.95
+VVO:0002641	skos:narrowMatch	PO:0025029	semapv:HumanCurated	0.95
+VVO:0002946	skos:closeMatch	PO:0025361	semapv:HumanCurated	0.95
+VVO:0003212	skos:exactMatch	NCBITAXON:29760	semapv:HumanCurated	0.95
