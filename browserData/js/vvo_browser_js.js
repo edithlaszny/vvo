@@ -155,14 +155,35 @@ function parseAlternativeTerms(termString) {
 }
 
 // ── Render external_mapping (SKOS) ──
+//
+// Sentinel:  "no_mapping_assigned"
+//            "no_mapping_assigned ## <justification text>"
+//   Both forms render as italic grey "no mapping assigned"; if a justification
+//   is present it is appended after an em-dash, italic grey, smaller font.
+//   The justification is intentionally only visible in the browser; the OWL
+//   generator skips the sentinel entirely (no annotation emitted).
+//
 function renderExternalMappings(mappings) {
   if (!mappings || (Array.isArray(mappings) && mappings.length === 0)) return '';
 
   const entries = Array.isArray(mappings) ? mappings : [mappings];
 
-  // Filter out sentinel
-  const valid = entries.filter(e => e && e.trim() !== 'no_mapping_assigned');
-  const hasNoMapping = entries.some(e => e && e.trim() === 'no_mapping_assigned');
+  // Detect sentinel — accepts "no_mapping_assigned" optionally followed by " ## <justification>".
+  // Word-boundary ensures we don't match an unrelated identifier that happens to start with the literal.
+  const SENTINEL_RE = /^no_mapping_assigned\b/;
+  const isSentinel = e => !!e && SENTINEL_RE.test(e.trim());
+  const extractJustification = e => {
+    const t = e.trim();
+    const m = t.match(/^no_mapping_assigned\s*##\s*(.+)$/);
+    return m ? m[1].trim() : null;
+  };
+
+  const valid = entries.filter(e => e && !isSentinel(e));
+  const sentinels = entries.filter(e => e && isSentinel(e));
+  const hasNoMapping = sentinels.length > 0;
+  const justifications = sentinels
+    .map(extractJustification)
+    .filter(j => j !== null && j.length > 0);
 
   if (valid.length === 0 && !hasNoMapping) return '';
 
@@ -198,8 +219,12 @@ function renderExternalMappings(mappings) {
       </div>`;
   }).filter(r => r).join('');
 
+  const justHtml = justifications.length > 0
+    ? `<span style="font-style:italic;color:#9ca3af;font-size:12px;margin-left:10px">— ${justifications.join('; ')}</span>`
+    : '';
+
   const noMapRow = hasNoMapping && valid.length === 0
-    ? `<div class="skos-mapping-row" style="margin-bottom:6px"><span class="skos-no-mapping" style="font-style:italic;color:#9ca3af;font-size:13px">no mapping assigned</span></div>`
+    ? `<div class="skos-mapping-row" style="margin-bottom:6px"><span class="skos-no-mapping" style="font-style:italic;color:#9ca3af;font-size:13px">no mapping assigned</span>${justHtml}</div>`
     : '';
 
   return `

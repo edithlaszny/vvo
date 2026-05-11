@@ -1,41 +1,92 @@
-# mapping_set_id: https://github.com/edithlaszny/vvo/vvo-mappings-v2-005
-# mapping_set_version: 2-005
+# mapping_set_id: https://github.com/edithlaszny/vvo/vvo-mappings-v2-006
+# mapping_set_version: 2-006
+# mapping_date: 2026-05-11
 # license: https://creativecommons.org/licenses/by/4.0/
-# creator_id: orcid:0009-0005-6549-9839
+# creator_id:  https://orcid.org/0009-0005-6549-9839
 # curie_map:
 #   BTO: "http://purl.obolibrary.org/obo/BTO_"
 #   FOODON: "http://purl.obolibrary.org/obo/FOODON_"
+#   GO: "http://purl.obolibrary.org/obo/GO_"
 #   NCBITAXON: "http://purl.bioontology.org/ontology/NCBITAXON/"
 #   PO: "http://purl.obolibrary.org/obo/PO_"
 #   PPO: "http://purl.obolibrary.org/obo/PPO_"
 #   UBERON: "http://purl.obolibrary.org/obo/UBERON_"
 #   VVO: "http://purl.obolibrary.org/obo/VVO_"
+#   orcid: "https://orcid.org/"
 #   semapv: "https://w3id.org/semapv/vocab/"
 #   skos: "http://www.w3.org/2004/02/skos/core#"
 subject_id	predicate_id	object_id	match_type	confidence
-VVO:0000124	skos:closeMatch	BTO:0000274	semapv:HumanCurated	0.95
-VVO:0000138	skos:narrowMatch	PO:0009047	semapv:HumanCurated	0.95
-VVO:0000249	skos:closeMatch	FOODON:00003521	semapv:HumanCurated	0.95
-VVO:0000359	skos:closeMatch	BTO:0000158	semapv:HumanCurated	0.90
-VVO:0000359	skos:exactMatch	PO:0000055	semapv:HumanCurated	0.95
-VVO:0000359	skos:relatedMatch	UBERON:0001048	semapv:HumanCurated	0.90
-VVO:0000401	skos:narrowMatch	PO:0009047	semapv:HumanCurated	0.95
-VVO:0000513	skos:narrowMatch	PO:0025361	semapv:HumanCurated	0.90
-VVO:0000809	skos:narrowMatch	PO:0000056	semapv:HumanCurated	0.90
-VVO:0000809	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
-VVO:0001013	skos:closeMatch	PO:0009046	semapv:HumanCurated	0.95
+VVO:0003212	skos:exactMatch	NCBITAXON:29760	semapv:HumanCurated	0.95
 VVO:0001162	skos:closeMatch	PO:0009011	semapv:HumanCurated	0.95
-VVO:0001164	skos:narrowMatch	FOODON:03510197	semapv:HumanCurated	0.95
-VVO:0001354	skos:closeMatch	PO:0009049	semapv:HumanCurated	0.95
-VVO:0001484	skos:narrowMatch	PO:0000055	semapv:HumanCurated	0.90
-VVO:0001484	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0000359	skos:exactMatch	PO:0000055	semapv:HumanCurated	0.95
+VVO:0000359	skos:closeMatch	BTO:0000158	semapv:HumanCurated	0.90
+VVO:0000359	skos:relatedMatch	UBERON:0001048	semapv:HumanCurated	0.90
+VVO:0002415	skos:broadMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0002415	skos:broadMatch	PO:0000055	semapv:HumanCurated	0.90
+VVO:0000809	skos:broadMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0000809	skos:broadMatch	PO:0000056	semapv:HumanCurated	0.90
+VVO:0001484	skos:broadMatch	PO:0000230	semapv:HumanCurated	0.90
+VVO:0001484	skos:broadMatch	PO:0000055	semapv:HumanCurated	0.90
+VVO:0000124	skos:closeMatch	BTO:0000274	semapv:HumanCurated	0.95
+VVO:0002254	skos:broadMatch	PO:0025084	semapv:HumanCurated	0.95
+VVO:0000401	skos:broadMatch	PO:0009047	semapv:HumanCurated	0.95
+VVO:0000138	skos:broadMatch	PO:0009047	semapv:HumanCurated	0.95
+VVO:0001828	skos:broadMatch	PO:0025073	semapv:HumanCurated	0.95
+VVO:0002641	skos:broadMatch	PO:0025029	semapv:HumanCurated	0.95
+VVO:0002946	skos:closeMatch	PO:0025361	semapv:HumanCurated	0.95
+VVO:0000513	skos:broadMatch	PO:0025361	semapv:HumanCurated	0.90
 VVO:0001508	skos:closeMatch	PO:0025034	semapv:HumanCurated	0.95
 VVO:0001689	skos:closeMatch	PPO:0001019	semapv:HumanCurated	0.95
-VVO:0001828	skos:narrowMatch	PO:0025073	semapv:HumanCurated	0.95
-VVO:0002254	skos:narrowMatch	PO:0025084	semapv:HumanCurated	0.95
-VVO:0002415	skos:narrowMatch	PO:0000055	semapv:HumanCurated	0.90
-VVO:0002415	skos:narrowMatch	PO:0000230	semapv:HumanCurated	0.90
-VVO:0002529	skos:narrowMatch	UBERON:0002100	semapv:HumanCurated	0.95
-VVO:0002641	skos:narrowMatch	PO:0025029	semapv:HumanCurated	0.95
-VVO:0002946	skos:closeMatch	PO:0025361	semapv:HumanCurated	0.95
-VVO:0003212	skos:exactMatch	NCBITAXON:29760	semapv:HumanCurated	0.95
+VVO:0001354	skos:closeMatch	PO:0009049	semapv:HumanCurated	0.95
+VVO:0001013	skos:closeMatch	PO:0009046	semapv:HumanCurated	0.95
+VVO:0000249	skos:broadMatch	FOODON:00003521	semapv:HumanCurated	0.85
+VVO:0000249	skos:broadMatch	BTO:0000119	semapv:HumanCurated	0.85
+VVO:0002567	skos:closeMatch	FOODON:00002568	semapv:HumanCurated	0.95
+VVO:0002529	skos:broadMatch	UBERON:0002100	semapv:HumanCurated	0.95
+VVO:0001163	skos:broadMatch	PO:0007033	semapv:HumanCurated	0.95
+VVO:0000363	skos:broadMatch	PO:0025532	semapv:HumanCurated	0.90
+VVO:0002648	skos:broadMatch	GO:0048367	semapv:HumanCurated	0.85
+VVO:0002648	skos:relatedMatch	GO:0010016	semapv:HumanCurated	0.80
+VVO:0002645	skos:broadMatch	PO:0007089	semapv:HumanCurated	0.95
+VVO:0001407	skos:narrowMatch	PO:0007091	semapv:HumanCurated	0.75
+VVO:0001519	skos:broadMatch	PO:0001050	semapv:HumanCurated	0.75
+VVO:0002653	skos:relatedMatch	GO:0009699	semapv:HumanCurated	0.70
+VVO:0001357	skos:broadMatch	GO:0048281	semapv:HumanCurated	0.85
+VVO:0001021	skos:closeMatch	PO:0007616	semapv:HumanCurated	0.95
+VVO:0000104	skos:closeMatch	PO:0007616	semapv:HumanCurated	0.85
+VVO:0002168	skos:relatedMatch	PPO:0001039	semapv:HumanCurated	0.70
+VVO:0002177	skos:closeMatch	GO:0009856	semapv:HumanCurated	0.90
+VVO:0000945	skos:closeMatch	GO:0009566	semapv:HumanCurated	0.90
+VVO:0002175	skos:broadMatch	GO:0010183	semapv:HumanCurated	0.8
+VVO:0002892	skos:broadMatch	GO:0010198	semapv:HumanCurated	0.8
+VVO:0000824	skos:broadMatch	GO:0010183	semapv:HumanCurated	0.8
+VVO:0000765	skos:closeMatch	GO:0009567	semapv:HumanCurated	0.90
+VVO:0000825	skos:closeMatch	GO:0061936	semapv:HumanCurated	0.9
+VVO:0001058	skos:narrowMatch	PO:0007032	semapv:HumanCurated	0.9
+VVO:0001988	skos:relatedMatch	PO:0004505	semapv:HumanCurated	0.65
+VVO:0000267	skos:broadMatch	PPO:0007028	semapv:HumanCurated	0.70
+VVO:0000260	skos:broadMatch	GO:0010154	semapv:HumanCurated	0.85
+VVO:0000260	skos:broadMatch	PO:0001002	semapv:HumanCurated	0.85
+VVO:0002579	skos:broadMatch	PO:0001170	semapv:HumanCurated	0.80
+VVO:0002283	skos:broadMatch	GO:0016998	semapv:HumanCurated	0.8
+VVO:0002283	skos:broadMatch	GO:0042545	semapv:HumanCurated	0.8
+VVO:0000554	skos:relatedMatch	GO:0009718	semapv:HumanCurated	0.70
+VVO:0002443	skos:broadMatch	PO:0025502	semapv:HumanCurated	0.9
+VVO:0002840	skos:broadMatch	GO:0034219	semapv:HumanCurated	0.75
+VVO:0000031	skos:broadMatch	GO:0006108	semapv:HumanCurated	0.80
+VVO:0003218	skos:broadMatch	GO:0044550	semapv:HumanCurated	0.75
+VVO:0003218	skos:narrowMatch	GO:0046184	semapv:HumanCurated	0.8
+VVO:0003218	skos:narrowMatch	GO:1902655	semapv:HumanCurated	0.8
+VVO:0002097	skos:broadMatch	GO:0009718	semapv:HumanCurated	0.80
+VVO:0002097	skos:broadMatch	GO:0010023	semapv:HumanCurated	0.70
+VVO:0002097	skos:broadMatch	GO:0051555	semapv:HumanCurated	0.80
+VVO:0001533	skos:closeMatch	GO:0010150	semapv:HumanCurated	0.90
+VVO:0000496	skos:broadMatch	GO:0033310	semapv:HumanCurated	0.9
+VVO:0002079	skos:broadMatch	GO:0009838	semapv:HumanCurated	0.80
+VVO:0000449	skos:closeMatch	GO:0060867	semapv:HumanCurated	0.90
+VVO:0001516	skos:relatedMatch	GO:0009838	semapv:HumanCurated	0.75
+VVO:0000746	skos:broadMatch	GO:0022611	semapv:HumanCurated	0.90
+VVO:0000755	skos:closeMatch	GO:0097436	semapv:HumanCurated	0.85
+VVO:0000865	skos:relatedMatch	GO:0097437	semapv:HumanCurated	0.70
+VVO:0000817	skos:relatedMatch	GO:0097437	semapv:HumanCurated	0.70
+VVO:0000483	skos:closeMatch	GO:0097438	semapv:HumanCurated	0.85

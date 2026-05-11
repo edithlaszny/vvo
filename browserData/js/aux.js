@@ -1,5 +1,5 @@
 
-var lastModifDate = "VVO &mdash; Vitis Vinifera Ontology | V. 2-005 | 2026/04/19" ;
+var lastModifDate = "VVO &mdash; Vitis Vinifera Ontology | V. 2-006 | 2026/05/11" ;
 
 function writeFooterUp()
 {
